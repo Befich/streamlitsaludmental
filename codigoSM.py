@@ -13,7 +13,7 @@ with st.sidebar:
     if st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?"):
         bot = 1
 if bot == 1:
-   st.write("a")
-st.write("todo lo cura el fornai")
+    st.write("a")
+    st.write("Ajbfskug")
 
     
