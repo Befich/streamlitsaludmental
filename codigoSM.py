@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
+st.title("Salud mental en trabajo remoto")
 st.markdown("""
 <style>
     [data-testid=stSidebar] {
