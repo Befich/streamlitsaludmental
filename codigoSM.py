@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+
+#https://appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app/#salud-mental-en-trabajo-remoto
+
 st.title("Salud mental en trabajo remoto")
 st.markdown("""
 <style>
@@ -15,5 +18,6 @@ with st.sidebar:
 if bot == 1:
     st.write("a")
     st.write("Ajbfskug")
+else:
 
     
