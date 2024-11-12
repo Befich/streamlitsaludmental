@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 st.markdown("""
 <style>
     [data-testid=stSidebar] {
-        background-color: #ff000050;
+        background-color: #139ab2;
     }
 </style>
 """, unsafe_allow_html=True)
