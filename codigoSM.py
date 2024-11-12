@@ -10,3 +10,6 @@ st.markdown("""
 
 with st.sidebar:
     st.markdown("<h1 style='color: white'>Este es un texto rojo</h1>", unsafe_allow_html=True)
+    if st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?"):
+        st.write("a")
+    
