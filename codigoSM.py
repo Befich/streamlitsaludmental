@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#https://appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app/#salud-mental-en-trabajo-remoto
-
 st.title("Salud mental en trabajo remoto")
 st.markdown("""
 <style>
