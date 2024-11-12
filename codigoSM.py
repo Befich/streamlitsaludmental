@@ -11,4 +11,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown(' style="color: white;">Este es un texto rojo', unsafe_allow_html=True)
+    st.markdown('</h1>style="color: white;">Este es un texto rojo</h1>', unsafe_allow_html=True)
