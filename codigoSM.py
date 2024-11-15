@@ -18,6 +18,8 @@ with st.sidebar:
     if casil1:
         st.write("Casilla presionada")
         casil2 = st.checkbox("subcasilla")
+        if casil2:
+            casil3st.checkbox("Otramas")
         
 
 
