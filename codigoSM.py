@@ -16,6 +16,6 @@ with st.sidebar:
 if bot == 1:
     st.write("a")
     st.write("Ajbfskug")
-else:
+
 
     
