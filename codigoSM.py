@@ -17,6 +17,9 @@ with st.sidebar:
     casil1= st.checkbox("Hola")
     if casil1:
         st.write("Casilla presionada")
-    
+agree = st.checkbox("I agree")
+
+if agree:
+    st.write("Great!")
 
     
