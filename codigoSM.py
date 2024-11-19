@@ -21,22 +21,24 @@ with st.sidebar:
         if casil2:
             casil3 = st.checkbox("Otramas")
 
-
 # Lista de columnas numéricas que podrían ser usadas para el eje Y
 columnas_numericas = ["Age", "Years_of_Experience", "Hours_Worked_Per_Week", "Number_of_Virtual_Meetings", 
                       "Work_Life_Balance_Rating", "Stress_Level", "Productivity_Change", 
                       "Social_Isolation_Rating", "Satisfaction_with_Remote_Work"]
 
+# Lista de columnas categóricas que podrían ser usadas para el eje X
+columnas_categoricas = ["Gender", "Job_Role", "Work_Location", "Mental_Health_Condition", 
+                        "Access_to_Mental_Health_Resources", "Company_Support_for_Remote_Work", 
+                        "Physical_Activity", "Sleep_Quality"]
+
+# Seleccionar columna para el eje X
+columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
+
 # Seleccionar columna para el eje Y
 columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
 
-# Botón para cambiar el eje X
-if st.button("Cambiar eje X entre Género y Rol de trabajo"):
-    # Si se presiona el botón, usa Rol_trabajo como eje X
-    st.bar_chart(df, x="Job_Role", y=columna_y)
-else:
-    # Si no se presiona el botón, usa Género como eje X
-    st.bar_chart(df, x="Gender", y=columna_y)
+# Crear el gráfico de barras
+st.bar_chart(df, x=columna_x, y=columna_y)
 
 def grafico_barra(x,y):
     x = Eje_X
