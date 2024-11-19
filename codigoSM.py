@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+df = pd.read_csv("Impact_of_Remote_Work_on_Mental_Health.csv")
 st.title("Salud mental en trabajo remoto")
 st.markdown("""
 <style>
