@@ -25,7 +25,7 @@ def grafico_barra(x,y):
     x = Eje_X
     y = Eje_Y
     fig,ax = plt.subplots()
-    ax.bar([Eje_X, Eje_Y], [cant_Eje_X, cant_Eje_Y], color = )
+    ax.bar([Eje_X, Eje_Y], [cant_Eje_X, cant_Eje_Y], color ="#26B6A7" )
     ax.set_xlabel("Eje X")
     ax.set_ylabel("Eje Y")
     ax.set_title('Titulo')
