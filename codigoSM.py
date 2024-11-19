@@ -42,18 +42,6 @@ columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numeri
 # Crear el gráfico de barras
 st.bar_chart(df, x=columna_x, y=columna_y)
 
-def grafico_barra(df):
-    columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
-
-# Seleccionar columna para el eje Y
-    columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
-
-# Crear el gráfico de barras
-    st.bar_chart(df, x=columna_x, y=columna_y)
-    
-grafico_barra(df)
-
-
 def crear_grafico_barras(df):
     # Lista de columnas numéricas que podrían ser usadas para el eje Y
     columnas_numericas = ["Age", "Years_of_Experience", "Hours_Worked_Per_Week", "Number_of_Virtual_Meetings", 
