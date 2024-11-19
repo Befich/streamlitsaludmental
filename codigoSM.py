@@ -20,7 +20,15 @@ with st.sidebar:
         casil2 = st.checkbox("subcasilla")
         if casil2:
             casil3 = st.checkbox("Otramas")
-        
 
+def grafico_barra(x,y):
+    x = Eje_X
+    y = Eje_Y
+    fig,ax = plt.subplots()
+    ax.bar([Eje_X, Eje_Y], [cant_Eje_X, cant_Eje_Y], color = )
+    ax.set_xlabel("Eje X")
+    ax.set_ylabel("Eje Y")
+    ax.set_title('Titulo')
+    st.pyplot(fig)
 
     
