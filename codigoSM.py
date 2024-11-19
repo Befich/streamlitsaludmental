@@ -21,17 +21,6 @@ with st.sidebar:
         if casil2:
             casil3 = st.checkbox("Otramas")
 
-# Asumiendo que tu DataFrame se llama 'df' y ya está cargado
-
-# Crear un botón
-if st.button("Cambiar eje X"):
-    # Si se presiona el botón, cambia el eje X
-    st.bar_chart(df, x="Age", y="Job_Role")
-else:
-    # Si no se presiona el botón, muestra el gráfico original
-    st.bar_chart(df, x="Age", y="Work_Location")
-
-
 #Variables de columnas
 Edad = df["Age"]
 Genero = df["Gender"]
@@ -68,3 +57,11 @@ axx.set_xlabel("Toneladas")
 axx.set_ylabel("Frecuencia")
 axx.set_title("Histograma")
 st.pyplot(figg)
+
+if st.button("Cambiar eje X"):
+    # Si se presiona el botón, cambia el eje X
+    st.bar_chart(df, x="Age", y="Job_Role")
+else:
+    # Si no se presiona el botón, muestra el gráfico original
+    st.bar_chart(df, x="Age", y="Work_Location")
+
