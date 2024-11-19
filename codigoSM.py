@@ -21,24 +21,22 @@ with st.sidebar:
         if casil2:
             casil3 = st.checkbox("Otramas")
 
-#Variables de columnas
-Edad = df["Age"]
-Genero = df["Gender"]
-Rol_trabajo = df["Job_Role"]
-Anos_de_experiencia = df["Years_of_Experience"]
-Lugar_trabajo = df["Work_Location"]
-Horas_por_semana = df["Hours_Worked_Per_Week"]
-Numero_reu_vir = df["Number_of_Virtual_Meetings"]
-Clasi_hora_trabajo = df["Work_Life_Balance_Rating"]
-Nivel_estres = df["Stress_Level"]
-Condi_salud_mental = df["Mental_Health_Condition"]
-acc_a_recursos_mental = df["Access_to_Mental_Health_Resources"]
-Cambio_productividad = df["Productivity_Change"]
-Clasi_aislam_social = df["Social_Isolation_Rating"]
-Satis_trabajo_remo = df["Satisfaction_with_Remote_Work"]
-apoyo_compania_trabrem= df["Company_Support_for_Remote_Work"]
-acti_fisica = df["Physical_Activity"]
-calidad_sueno = df["Sleep_Quality"]
+
+# Lista de columnas numéricas que podrían ser usadas para el eje Y
+columnas_numericas = ["Age", "Years_of_Experience", "Hours_Worked_Per_Week", "Number_of_Virtual_Meetings", 
+                      "Work_Life_Balance_Rating", "Stress_Level", "Productivity_Change", 
+                      "Social_Isolation_Rating", "Satisfaction_with_Remote_Work"]
+
+# Seleccionar columna para el eje Y
+columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
+
+# Botón para cambiar el eje X
+if st.button("Cambiar eje X entre Género y Rol de trabajo"):
+    # Si se presiona el botón, usa Rol_trabajo como eje X
+    st.bar_chart(df, x="Job_Role", y=columna_y)
+else:
+    # Si no se presiona el botón, usa Género como eje X
+    st.bar_chart(df, x="Gender", y=columna_y)
 
 def grafico_barra(x,y):
     x = Eje_X
