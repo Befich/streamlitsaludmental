@@ -26,10 +26,10 @@ with st.sidebar:
 # Crear un botón
 if st.button("Cambiar eje X"):
     # Si se presiona el botón, cambia el eje X
-    st.bar_chart(df, x="columna_x_alternativa", y="columna_y")
+    st.bar_chart(df, x="Age", y="Job_Role")
 else:
     # Si no se presiona el botón, muestra el gráfico original
-    st.bar_chart(df, x="columna_x_original", y="columna_y")
+    st.bar_chart(df, x="Age", y="Work_Location")
 
 
 #Variables de columnas
