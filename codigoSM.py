@@ -34,10 +34,10 @@ columnas_categoricas = ["Gender", "Job_Role", "Work_Location", "Mental_Health_Co
                         "Physical_Activity", "Sleep_Quality"]
 
 # Seleccionar columna para el eje X
-columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
+columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_numericas)
 
 # Seleccionar columna para el eje Y
-columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
+columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_categoricas)
 
 # Crear el gráfico de barras
 st.bar_chart(df, x=columna_x, y=columna_y)
