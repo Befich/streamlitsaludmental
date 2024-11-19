@@ -42,7 +42,7 @@ columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numeri
 # Crear el gráfico de barras
 st.bar_chart(df, x=columna_x, y=columna_y)
 
-def grafico_barra(x,y):
+def grafico_barra(df):
     columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
 
 # Seleccionar columna para el eje Y
@@ -50,18 +50,5 @@ def grafico_barra(x,y):
 
 # Crear el gráfico de barras
     st.bar_chart(df, x=columna_x, y=columna_y)
-
-# Desplegamos un histograma con los datos del eje X
-figg, axx = plt.subplots(figsize=(8, 5))  
-axx.hist(df["Fertilizer_Used(tons)"], bins=20, color="#078385", edgecolor="#B77D26")
-axx.set_xlabel("Toneladas")
-axx.set_ylabel("Frecuencia")
-axx.set_title("Histograma")
-st.pyplot(figg)
-
-if st.button("Cambiar eje X"):
-    # Si se presiona el botón, cambia el eje X
-    st.bar_chart(df, x="Age", y="Job_Role")
-else:
-    # Si no se presiona el botón, muestra el gráfico original
-    st.bar_chart(df, x="Age", y="Work_Location")
+    
+grafico_barra(df)
