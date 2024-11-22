@@ -54,17 +54,17 @@ st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 columna_trastorno = ["Depresion","Ansiedad","Burnout"]
 st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
 if columna_trastorno == "Depresión":
-###
+
     # Leer el archivo PDF local
-    with open("sobre la depresi.pdf", r) as f:
-        pdf_data = f.read()
+#    with open("sobre la depresi.pdf", r) as f:
+ #       pdf_data = f.read()
     
     # Crear el botón de descarga para el archivo PDF local
-    st.download_button(
-        label="Pulsa aqui para descargar un PDF acerca de la depresion",
-        data=,
-        file_name="archivo_local.pdf",
-        mime="application/pdf"
-    )
+  #  st.download_button(
+  #      label="Pulsa aqui para descargar un PDF acerca de la depresion",
+   #     data=,
+    #    file_name="archivo_local.pdf",
+  #      mime="application/pdf"
+  #  )
 ###
 
