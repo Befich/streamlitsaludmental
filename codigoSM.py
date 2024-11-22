@@ -17,7 +17,7 @@ with st.sidebar:
     playlist_url = "https://www.youtube.com/playlist?list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
     playlist_id = playlist_url.split('list=')[-1]
     components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_id}", 
-                  width=100, height=100)  # Tamaño cuadrado
+                  width=200, height=300)  # Tamaño cuadrado
 
 
     
