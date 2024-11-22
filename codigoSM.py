@@ -53,7 +53,7 @@ st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
 columna_trastorno = ["Depresion","Ansiedad","Burnout"]
 st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
-if columna_trastorno == "Depresión":
+#if columna_trastorno == "Depresión":
 
     # Leer el archivo PDF local
 #    with open("sobre la depresi.pdf", r) as f:
