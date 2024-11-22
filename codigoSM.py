@@ -42,29 +42,6 @@ columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numeri
 # Crear el gráfico de barras
 st.bar_chart(df, x=columna_x, y=columna_y)
 
-def crear_grafico_barras(df):
-    # Lista de columnas numéricas que podrían ser usadas para el eje Y
-    columnas_numericas = ["Age", "Years_of_Experience", "Hours_Worked_Per_Week", "Number_of_Virtual_Meetings", 
-                          "Work_Life_Balance_Rating", "Stress_Level", "Productivity_Change", 
-                          "Social_Isolation_Rating", "Satisfaction_with_Remote_Work"]
-
-    # Lista de columnas categóricas que podrían ser usadas para el eje X
-    columnas_categoricas = ["Gender", "Job_Role", "Work_Location", "Mental_Health_Condition", 
-                            "Access_to_Mental_Health_Resources", "Company_Support_for_Remote_Work", 
-                            "Physical_Activity", "Sleep_Quality"]
-
-    # Seleccionar columna para el eje X
-    columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
-
-    # Seleccionar columna para el eje Y
-    columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
-
-    # Crear el gráfico de barras
-    st.bar_chart(df, x=columna_x, y=columna_y)
-
-crear_grafico_barras(df)
-
-
 
 columnas_trastorno = ["Depresion","Ansiedad","Burnout"]
 columna_x = st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
