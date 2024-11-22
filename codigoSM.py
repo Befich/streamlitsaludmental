@@ -3,16 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 
-st.title('Reproductor Musical desde YouTube')
-
-# URL fija de la lista de reproducción de YouTube
-playlist_url = "https://www.youtube.com/watch?v=RhU9MZ98jxo&list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
-
-# Incrustar el reproductor de YouTube para la lista de reproducción fija
-components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_url.split('list=')[-1]}", 
-                  height=600, width=800)
-
-
 df = pd.read_csv("Impact_of_Remote_Work_on_Mental_Health.csv")
 st.title("Salud mental en trabajo remoto")
 st.markdown("""
@@ -23,6 +13,10 @@ st.markdown("""
 
 with st.sidebar:
     st.markdown("<h1 style='color: white'>Opciones de color</h1>", unsafe_allow_html=True)
+    st.title('Reproductor Musical desde YouTube')
+    playlist_url = "https://www.youtube.com/watch?v=RhU9MZ98jxo&list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
+    components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_url.split('list=')[-1]}", 
+                  height=600, width=800)
 
     
     color_grafico = st.color_picker('Selecciona un color para el grafico','#007bff')    
