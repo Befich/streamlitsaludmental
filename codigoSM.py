@@ -12,7 +12,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.header("<h1 style='color: white'>Opciones de color</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color: white'>Opciones de color</h1>", unsafe_allow_html=True)
+
+    
     color_grafico = st.color_picker('Selecciona un color para el grafico','#007bff')    
     boton1 = st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?")
     if boton1:
