@@ -62,8 +62,4 @@ def crear_grafico_barras(df):
     # Crear el gráfico de barras
     st.bar_chart(df, x=columna_x, y=columna_y)
 
-# Asumiendo que tu DataFrame se llama 'df' y ya está cargado
-# df = pd.DataFrame({...})  # Asegúrate de que df esté definido antes de llamar a la función
-
-# Llamar a la función para crear el gráfico
 crear_grafico_barras(df)
