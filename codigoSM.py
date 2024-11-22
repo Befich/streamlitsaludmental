@@ -63,3 +63,4 @@ def crear_grafico_barras(df):
     st.bar_chart(df, x=columna_x, y=columna_y)
 
 crear_grafico_barras(df)
+wa
