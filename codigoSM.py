@@ -14,10 +14,13 @@ st.markdown("""
 with st.sidebar:
     st.markdown("<h1 style='color: white'>Opciones de color</h1>", unsafe_allow_html=True)
     st.title('Reproductor Musical desde YouTube')
+    
     playlist_url = "https://www.youtube.com/playlist?list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
     playlist_id = playlist_url.split('list=')[-1]
     components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_id}", width=300, height=200) 
+    
     color_grafico = st.color_picker('Selecciona un color para el grafico','#007bff')    
+    
     boton1 = st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?")
     if boton1:
         st.write("alo")
@@ -50,4 +53,18 @@ st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
 columna_trastorno = ["Depresion","Ansiedad","Burnout"]
 st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
+if columna_trastorno = "Depresión":
+    
+    # Leer el archivo PDF local
+    with open("sobre la depresi.pdf", r) as f:
+        pdf_data = f.read()
+    
+    # Crear el botón de descarga para el archivo PDF local
+    st.download_button(
+        label="Pulsa aqui para descargar un PDF acerca de la depresion",
+        data=,
+        file_name="archivo_local.pdf",
+        mime="application/pdf"
+    )
+
 
