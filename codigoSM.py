@@ -14,9 +14,11 @@ st.markdown("""
 with st.sidebar:
     st.markdown("<h1 style='color: white'>Opciones de color</h1>", unsafe_allow_html=True)
     st.title('Reproductor Musical desde YouTube')
-    playlist_url = "https://www.youtube.com/watch?v=RhU9MZ98jxo&list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
-    components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_url.split('list=')[-1]}", 
-                  height=600, width=800)
+    playlist_url = "https://www.youtube.com/playlist?list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
+    playlist_id = playlist_url.split('list=')[-1]
+    components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_id}", 
+                  width=400, height=400)  # Tamaño cuadrado
+
 
     
     color_grafico = st.color_picker('Selecciona un color para el grafico','#007bff')    
