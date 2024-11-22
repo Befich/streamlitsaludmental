@@ -67,4 +67,4 @@ crear_grafico_barras(df)
 
 
 columnas_trastorno = ["Depresion","Ansiedad","Burnout"]
-columna_x = st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos")
+columna_x = st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
