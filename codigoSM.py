@@ -1,6 +1,16 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit.components.v1 as components
+
+st.title('Reproductor Musical desde YouTube')
+
+# URL fija de la lista de reproducción de YouTube
+playlist_url = "https://www.youtube.com/watch?v=RhU9MZ98jxo&list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
+
+# Incrustar el reproductor de YouTube para la lista de reproducción fija
+components.iframe(f"https://www.youtube.com/embed/videoseries?list={playlist_url.split('list=')[-1]}", 
+                  height=600, width=800)
 
 
 df = pd.read_csv("Impact_of_Remote_Work_on_Mental_Health.csv")
@@ -48,3 +58,4 @@ st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
 columna_trastorno = ["Depresion","Ansiedad","Burnout"]
 st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
+
