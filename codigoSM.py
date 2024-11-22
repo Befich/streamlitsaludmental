@@ -44,4 +44,4 @@ st.bar_chart(df, x=columna_x, y=columna_y)
 
 
 columnas_trastorno = ["Depresion","Ansiedad","Burnout"]
-columna_x = st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
+st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
