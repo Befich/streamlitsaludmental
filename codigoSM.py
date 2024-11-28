@@ -52,11 +52,10 @@ st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
 
 columna_trastorno = ["Depresión","Ansiedad","Burnout"]
-st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
-opcion = st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
+opciontras = st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
 
 
-if opcion == "Depresión":
+if opciontras == "Depresión":
     with open("Depression Booklet - Spanish.pdf", "rb") as arcpdf:
         PDFbyte = arcpdf.read()
     st.download_button(label="Pulsa aqui para descargar un PDF acerca de la depresion",
@@ -64,7 +63,7 @@ if opcion == "Depresión":
                         file_name="Depression Booklet.pdf",
                         mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
     
-elif opcion == "Ansiedad":
+elif opciontras == "Ansiedad":
     with open("ansiedad.pdf", "rb") as arf:
         PDFbyte = arf.read()
     st.download_button(label="Pulsa aqui para descargar un PDF acerca de la ansiedad",
@@ -75,3 +74,16 @@ elif opcion == "Ansiedad":
         st.write("bournuot")
 
 
+st.subheader("Más información sobre el gráfico seleccionado")
+informacion_1 = st.selectbox("Selecciona un tema para ver más información", ["Impacto del trabajo remoto", "Factores que afectan el estrés"], key="informacion_1")
+if informacion_1 == "Impacto del trabajo remoto":
+    st.write("El trabajo remoto tiene una gran influencia en la salud mental de los empleados. Puede aumentar el estrés debido a la falta de interacción social, la sobrecarga de trabajo, o la falta de control sobre el entorno.")
+elif informacion_1 == "Factores que afectan el estrés":
+    st.write("El estrés puede ser causado por varios factores, como la presión laboral, las responsabilidades familiares, el entorno de trabajo, y los problemas personales. La gestión del tiempo y las técnicas de relajación pueden ayudar a reducir el estrés.")
+
+st.subheader("Más detalles sobre el estudio")
+informacion_2 = st.selectbox("Selecciona un tema para obtener más detalles", ["Metodología del estudio", "Datos demográficos de los participantes"], key="informacion_2")
+if informacion_2 == "Metodología del estudio":
+    st.write("El estudio se basó en encuestas realizadas a trabajadores de diferentes sectores. Se recopilaron datos sobre su bienestar mental, estrés y satisfacción laboral.")
+elif informacion_2 == "Datos demográficos de los participantes":
+    st.write("Los participantes fueron trabajadores de diversas edades, géneros y niveles de experiencia. La mayoría trabajaba en sectores como tecnología, educación y atención al cliente.")
