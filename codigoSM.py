@@ -56,15 +56,10 @@ st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",column
 #if columna_trastorno == "Depresión":
 
     # Leer el archivo PDF local
-#    with open("sobre la depresi.pdf", r) as f:
- #       pdf_data = f.read()
-    
-    # Crear el botón de descarga para el archivo PDF local
-  #  st.download_button(
-  #      label="Pulsa aqui para descargar un PDF acerca de la depresion",
-   #     data=,
-    #    file_name="archivo_local.pdf",
-  #      mime="application/pdf"
-  #  )
-###
+with open("Depression Booklet - Spanish.pdf", "rb") as arcpdf:
+    PDFbyte = arcpdf.read()
+    st.download_button(label="Pulsa aqui para descargar un PDF acerca de la depresion",
+                       data=PDFbyte, 
+                       file_name="Depression Booklet.pdf",
+                       mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
 
