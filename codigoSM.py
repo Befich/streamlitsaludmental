@@ -53,17 +53,18 @@ st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
 columna_trastorno = ["Depresión","Ansiedad","Burnout"]
 st.selectbox("Selecciona uno de estos trastornos para saber mas de ellos",columna_trastorno)
-if columna_trastorno == "Depresión":
-    with open("Depression Booklet - Spanish.pdf", "rb") as arcpdf:
+
+with open("Depression Booklet - Spanish.pdf", "rb") as arcpdf:
     PDFbyte = arcpdf.read()
+if columna_trastorno == "Depresión":
     st.download_button(label="Pulsa aqui para descargar un PDF acerca de la depresion",
                        data=PDFbyte, 
                        file_name="Depression Booklet.pdf",
                        mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
-    
-if columna_trastorno == "Ansiedad":
-    with open("ansiedad.pdf", "rb") as arf:
+
+with open("ansiedad.pdf", "rb") as arf:
     PDFbyte = arf.read()
+if columna_trastorno == "Ansiedad":
     st.download_button(label="Pulsa aqui para descargar un PDF acerca de la ansiedad",
                        data=PDFbyte, 
                        file_name="Consejos y escala para la ansiedad.pdf",
