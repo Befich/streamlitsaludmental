@@ -58,12 +58,14 @@ if tipo_grafico == "Barras":
 elif tipo_grafico == "Histograma":
     columna_histograma = st.selectbox("Selecciona la columna para el histograma:", columnas_histograma_disponibles, key="histograma")
     if columna_histograma:
+        #Para el numero de bins
+        div = st.slider('Número de bins:', 0, 50, 10)
+        st.write("Bins=", div)
         # Crear histograma
         st.subheader(f"Histograma de {columna_histograma}")
         plt.hist(df[columna_histograma].dropna(), bins=div, color=color_grafico)
         st.pyplot(plt)
-        div = st.slider('Número de bins:', 0, 50, 10)
-        st.write("Bins=", div)
+        
 
 
 
