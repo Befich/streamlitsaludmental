@@ -31,6 +31,11 @@ with st.sidebar:
         if casil2:
             casil3 = st.checkbox("Otramas")
 
+tipo_grafico = st.radio("Selecciona el tipo de gráfico", ["Barras", "Histograma"])
+
+# Lista de columnas específicas permitidas para el histograma
+columnas_histograma_permitidas = ['Age', 'Years_of_Experience', 'Hours_Worked_Per_Week']
+
 # Lista de columnas numéricas que podrían ser usadas para el eje Y
 columnas_numericas = ["Age", "Years_of_Experience", "Hours_Worked_Per_Week", "Number_of_Virtual_Meetings", 
                       "Work_Life_Balance_Rating", "Stress_Level", "Productivity_Change", 
@@ -41,14 +46,23 @@ columnas_categoricas = ["Gender", "Job_Role", "Work_Location", "Mental_Health_Co
                         "Access_to_Mental_Health_Resources", "Company_Support_for_Remote_Work", 
                         "Physical_Activity", "Sleep_Quality"]
 
-# Seleccionar columna para el eje X
-columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
+columnas_histograma_disponibles = [col for col in columnas_numericas if col in columnas_histograma_permitidas]
+# --- Si seleccionamos gráfico de barras ---
+if tipo_grafico == "Barras":
+    columna_x = st.selectbox("Selecciona la columna para el eje X:", columnas_categoricas)
+    columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
+    
+    if columna_x and columna_y:
+       st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
-# Seleccionar columna para el eje Y
-columna_y = st.selectbox("Selecciona la columna para el eje Y:", columnas_numericas)
+elif tipo_grafico == "Histograma":
+    columna_histograma = st.selectbox("Selecciona la columna para el histograma:", columnas_histograma_disponibles, key="histograma")
+    if columna_histograma:
+        # Crear histograma
+        st.subheader(f"Histograma de {columna_histograma}")
+        plt.hist(df[columna_histograma].dropna(), bins=20, color=color_grafico)
+        st.pyplot(plt)
 
-# Crear el gráfico de barras
-st.bar_chart(df, x=columna_x, y=columna_y, color=color_grafico)
 
 
 columna_trastorno = ["Depresión","Ansiedad","Burnout"]
