@@ -70,8 +70,8 @@ elif opciontras == "Ansiedad":
                         data=PDFbyte, 
                         file_name="Consejos y escala para la ansiedad.pdf",
                         mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
-    else:
-        st.write("bournuot")
+else:
+    st.write("bournuot")
 
 
 st.subheader("Más información sobre el gráfico seleccionado")
