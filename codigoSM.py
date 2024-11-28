@@ -60,8 +60,10 @@ elif tipo_grafico == "Histograma":
     if columna_histograma:
         # Crear histograma
         st.subheader(f"Histograma de {columna_histograma}")
-        plt.hist(df[columna_histograma].dropna(), bins=20, color=color_grafico)
+        plt.hist(df[columna_histograma].dropna(), bins=div, color=color_grafico)
         st.pyplot(plt)
+        div = st.slider('Número de bins:', 0, 50, 10)
+        st.write("Bins=", div)
 
 
 
