@@ -61,6 +61,7 @@ if columna_trastorno == "Depresión":
                        data=PDFbyte, 
                        file_name="Depression Booklet.pdf",
                        mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
+    st.write("hoal")
 
 with open("ansiedad.pdf", "rb") as arf:
     PDFbyte = arf.read()
