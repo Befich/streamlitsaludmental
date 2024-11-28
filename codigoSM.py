@@ -73,13 +73,13 @@ elif opciontras == "Ansiedad":
 else:
     with open("Sindromeburnoutsintycausas.pdf", "rb") as afg:
         PDFbyte = afg.read()
-    st.download_button(label="Pulsa aqui para descargar un PDF acerca de la ansiedad",
+    st.download_button(label="Pulsa aqui para descargar un PDF acerca del Burnout",
                         data=PDFbyte, 
                         file_name="Sindrome Burnout causas y sintomas.pdf",
                         mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
     with open("cuestionarioburnout.pdf", "rb") as addf:
         PDFbyte = addf.read()
-    st.download_button(label="Pulsa aqui para descargar un PDF acerca de la ansiedad",
+    st.download_button(label="Pulsa aqui para descargar un Cuestionario sobre el Burnout",
                         data=PDFbyte, 
                         file_name="Cuestionario para Burnout.pdf",
                         mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
