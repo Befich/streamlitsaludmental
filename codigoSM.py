@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 
+
 df = pd.read_csv("Impact_of_Remote_Work_on_Mental_Health.csv")
 st.title("Salud mental en trabajo remoto")
 st.markdown("""
@@ -23,7 +24,7 @@ with st.sidebar:
     
     boton1 = st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?")
     if boton1:
-        st.write("alo")
+        st.write("La forma en que trabajamos puede influir mucho en cómo nos sentimos. Cuando tenemos demasiadas tareas, horarios muy ajustados y poca libertad para decidir cómo hacemos nuestro trabajo, es normal sentirse abrumado y estresado. Esto puede afectar nuestra salud física y mental, y hacer que sea más difícil disfrutar de nuestro tiempo libre. Por otro lado, cuando tenemos un trabajo que nos permite tener un buen equilibrio entre nuestra vida personal y profesional, nos sentimos más tranquilos y satisfechos, lo que a su vez nos hace más productivos.")
     casil1= st.checkbox("Hola")
     if casil1:
         st.write("Casilla presionada")
