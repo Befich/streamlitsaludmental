@@ -24,13 +24,11 @@ with st.sidebar:
     
     boton1 = st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?")
     if boton1:
-        st.write("La forma en que trabajamos puede influir mucho en cómo nos sentimos. Cuando tenemos demasiadas tareas, horarios muy ajustados y poca libertad para decidir cómo hacemos nuestro trabajo, es normal sentirse abrumado y estresado. Esto puede afectar nuestra salud física y mental, y hacer que sea más difícil disfrutar de nuestro tiempo libre. Por otro lado, cuando tenemos un trabajo que nos permite tener un buen equilibrio entre nuestra vida personal y profesional, nos sentimos más tranquilos y satisfechos, lo que a su vez nos hace más productivos.")
-    casil1= st.checkbox("Hola")
+        st.write("La forma en que trabajamos puede influir mucho en cómo nos sentimos. Cuando tenemos demasiadas tareas, horarios muy ajustados y poca libertad para decidir cómo hacemos nuestro trabajo, es normal sentirse abrumado y estresado. .")
+    casil1= st.checkbox("¿Y sabes como te afecta en tu salud?")
     if casil1:
-        st.write("Casilla presionada")
-        casil2 = st.checkbox("subcasilla")
-        if casil2:
-            casil3 = st.checkbox("Otramas")
+        st.write("El estrés laboral puede afectar gravemente nuestra salud física y mental. Provoca desde dolores de cabeza y problemas digestivos hasta ansiedad y depresión. Si sientes que el estrés está tomando el control, busca ayuda. Técnicas de relajación, ejercicio y una buena organización pueden ayudarte a manejarlo. Recuerda, tu bienestar es importante.")
+        
 
 tipo_grafico = st.radio("Selecciona el tipo de gráfico", ["Barras", "Histograma"])
 
