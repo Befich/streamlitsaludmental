@@ -147,7 +147,7 @@ elif tipo_grafico_pastel == "Distribución de roles laborales":
 
 
 st.subheader("Más información sobre el gráfico seleccionado")
-informacion_1 = st.selectbox("Selecciona un tema para ver más información", ["Impacto del trabajo remoto", "Factores que afectan el estrés"], key="informacion_1")
+informacion_1 = st.selectbox("Selecciona un tema para ver más información", ["Impacto del trabajo remoto", "Causas del estrés y como disminuirlo"], key="informacion_1")
 if informacion_1 == "Impacto del trabajo remoto":
     st.write("El trabajo remoto tiene una gran influencia en la salud mental de los empleados. Puede aumentar el estrés debido a la falta de interacción social, la sobrecarga de trabajo, o la falta de control sobre el entorno al no cambiar de aire.")
 elif informacion_1 == "Causas del estrés y como disminuirlo":
