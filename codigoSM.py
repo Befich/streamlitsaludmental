@@ -22,12 +22,12 @@ with st.sidebar:
     
     color_grafico = st.color_picker('Selecciona un color para el grafico','#007bff')    
     
-    boton1 = st.button("¿Cual es la relacion de nivel de  estres y modo de trabajo?")
+    boton1 = st.button("¿Cual es la relación entre el nivel de estres y trabajo?")
     if boton1:
-        st.write("La forma en que trabajamos puede influir mucho en cómo nos sentimos. Cuando tenemos demasiadas tareas, horarios muy ajustados y poca libertad para decidir cómo hacemos nuestro trabajo, es normal sentirse abrumado y estresado. .")
-    casil1= st.checkbox("¿Y sabes como te afecta en tu salud?")
+        st.write("El estres puede influir en la forma que trabajamos. Cuando tenemos demasiadas tareas, horarios muy ajustados y poca libertad para decidir cómo hacemos nuestro trabajo, es normal sentirse abrumado y estresado y esto baja nuestro nivel de concentración, energía y desempeño este ultimo puede poner en riesgo a nuestro puesto de trabajo.")
+    casil1= st.checkbox("¿Y sabes como la acumulación de estrés afecta a tu salud?")
     if casil1:
-        st.write("El estrés laboral puede afectar gravemente nuestra salud física y mental. Provoca desde dolores de cabeza y problemas digestivos hasta ansiedad y depresión. Si sientes que el estrés está tomando el control, busca ayuda. Técnicas de relajación, ejercicio y una buena organización pueden ayudarte a manejarlo. Recuerda, tu bienestar es importante.")
+        st.write("El estrés laboral puede afectar gravemente nuestra salud física y mental. Provoca desde dolores de cabeza y problemas digestivos, hasta ansiedad y depresión. Si sientes que el estrés está tomando el control, busca ayuda. Técnicas de relajación, ejercicio y una buena organización pueden ayudarte a manejarlo. Recuerda, tu bienestar es importante.")
         
 
 tipo_grafico = st.radio("Selecciona el tipo de gráfico", ["Barras", "Histograma"])
@@ -150,7 +150,7 @@ st.subheader("Más información sobre el gráfico seleccionado")
 informacion_1 = st.selectbox("Selecciona un tema para ver más información", ["Impacto del trabajo remoto", "Factores que afectan el estrés"], key="informacion_1")
 if informacion_1 == "Impacto del trabajo remoto":
     st.write("El trabajo remoto tiene una gran influencia en la salud mental de los empleados. Puede aumentar el estrés debido a la falta de interacción social, la sobrecarga de trabajo, o la falta de control sobre el entorno.")
-elif informacion_1 == "Factores que afectan el estrés":
+elif informacion_1 == "Factores que influyen en el estrés":
     st.write("El estrés puede ser causado por varios factores, como la presión laboral, las responsabilidades familiares, el entorno de trabajo, y los problemas personales. La gestión del tiempo y las técnicas de relajación pueden ayudar a reducir el estrés.")
 
 
