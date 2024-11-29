@@ -149,3 +149,54 @@ if informacion_2 == "Metodología del estudio":
     st.write("El estudio se basó en encuestas realizadas a trabajadores de diferentes sectores. Se recopilaron datos sobre su bienestar mental, estrés y satisfacción laboral.")
 elif informacion_2 == "Datos demográficos de los participantes":
     st.write("Los participantes fueron trabajadores de diversas edades, géneros y niveles de experiencia. La mayoría trabajaba en sectores como tecnología, educación y atención al cliente.")
+
+
+
+
+
+
+
+# Columnas seleccionables
+columns_to_use = [
+    "Age",
+    "Years_of_Experience",
+    "Hours_Worked_Per_Week",
+    "Number_of_Virtual_Meetings",
+    "Work_Life_Balance_Rating",
+    "Social_Isolation_Rating",
+    "Company_Support_for_Remote_Work",
+]
+
+st.title("Gráfico de Dispersión Interactivo")
+
+# Controles del usuario
+x_axis = st.selectbox("Selecciona la columna para el eje X:", columns_to_use, index=0)
+y_axis = st.selectbox("Selecciona la columna para el eje Y:", columns_to_use, index=1)
+size = st.selectbox("Selecciona la columna para el tamaño de los círculos:", columns_to_use, index=2)
+color = st.selectbox("Selecciona la columna para el color:", columns_to_use, index=3)
+
+st.write("### Configuración seleccionada:")
+st.write(f"**Eje X:** {x_axis}, **Eje Y:** {y_axis}, **Tamaño:** {size}, **Color:** {color}")
+
+# Crear gráfico con Matplotlib
+plt.figure(figsize=(10, 6))
+scatter = plt.scatter(
+    df[x_axis],
+    df[y_axis],
+    s=df[size] * 10,  # Multiplicamos por 10 para hacer los círculos más visibles
+    c=df[color],
+    cmap='viridis',  # Puedes cambiar la paleta de colores
+    alpha=0.6,
+    edgecolor='k'
+)
+
+# Etiquetas y título
+plt.xlabel(x_axis)
+plt.ylabel(y_axis)
+plt.title(f'Gráfico de Dispersión: {x_axis} vs {y_axis}')
+
+# Barra de color
+plt.colorbar(scatter, label=color)
+
+# Mostrar gráfico en Streamlit
+st.pyplot(plt)
