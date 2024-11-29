@@ -220,7 +220,7 @@ colors = [color_grafico_1, color_grafico_2, color_grafico_3]
 # Crear el gráfico de barras apiladas
 fig, ax = plt.subplots(figsize=(10, 6))
 
-# Crear el gráfico de barras apiladas sin agrupamiento (asumiendo que ya están los datos de la columna `Stress_Level`)
+# Crear el gráfico de barras apiladas sin agrupamiento 
 df_pivot = df.pivot_table(index='Work_Location', columns='Stress_Level', aggfunc='size', fill_value=0)
 
 # Crear gráfico de barras apiladas
