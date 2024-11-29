@@ -254,3 +254,10 @@ if informacion_2 == "Metodología del estudio":
     st.write("El estudio se basó en encuestas realizadas a trabajadores de diferentes sectores. Se recopilaron datos sobre su bienestar mental, estrés y satisfacción laboral.")
 elif informacion_2 == "Datos demográficos de los participantes":
     st.write("Los participantes fueron trabajadores de diversas edades, géneros y niveles de experiencia. La mayoría trabajaba en sectores como tecnología, educación y atención al cliente.")
+
+
+
+
+st.text("Muchas personas que tienen trastornos de salud mental consideran que sus signos y síntomas son parte normal de la vida o evitan el tratamiento por vergüenza o miedo. Si te preocupa tu salud mental, no dudes en pedir consejo.
+Consulta a tu médico de atención primaria o pide una cita con un psiquiatra, psicólogo u otro profesional de la salud mental. Puede ser importante para ti encontrar un profesional que esté familiarizado con tu cultura o que demuestre una comprensión del contexto cultural y social que sea relevante para tus experiencias e historias de vida.
+Con el apoyo apropiado, puedes identificar afecciones de salud mental y recibir tratamiento apropiado, como medicamentos o asesoría.")
