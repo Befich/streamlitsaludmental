@@ -109,6 +109,7 @@ else:
 
 
 st.title("Gráficos de Pastel")
+st.text("Te invitamos a explorar la composición de los encuestados a través de estos gráficos interactivos. Podrás visualizar de manera clara la distribución geográfica de nuestros colaboradores, la diversidad de género y la asignación de roles. Esta herramienta te permitirá conocer en profundidad la estructura de la organización de los encuestados.")
 tipo_grafico_pastel = st.radio("Selecciona el gráfico que deseas visualizar:", ["Porcentaje de empleados por región", "Porcentaje de empleados por género", "Distribución de roles laborales"])
 
 # Generar gráfico de pastel
