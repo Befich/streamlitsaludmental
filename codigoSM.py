@@ -149,7 +149,7 @@ elif tipo_grafico_pastel == "Distribución de roles laborales":
 st.subheader("Más información sobre el gráfico seleccionado")
 informacion_1 = st.selectbox("Selecciona un tema para ver más información", ["Impacto del trabajo remoto", "Factores que afectan el estrés"], key="informacion_1")
 if informacion_1 == "Impacto del trabajo remoto":
-    st.write("El trabajo remoto tiene una gran influencia en la salud mental de los empleados. Puede aumentar el estrés debido a la falta de interacción social, la sobrecarga de trabajo, o la falta de control sobre el entorno al no "cambiar de aire".")
+    st.write("El trabajo remoto tiene una gran influencia en la salud mental de los empleados. Puede aumentar el estrés debido a la falta de interacción social, la sobrecarga de trabajo, o la falta de control sobre el entorno al no cambiar de aire.")
 elif informacion_1 == "Causas del estrés y como disminuirlo":
     st.write("El estrés puede ser causado por varios factores, como la presión laboral, las responsabilidades familiares, el entorno de trabajo, y los problemas personales. La gestión del tiempo y las técnicas de relajación pueden ayudar a reducir el estrés.")
 
