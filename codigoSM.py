@@ -200,6 +200,10 @@ st.pyplot(plt)
 
 
 st.text("")
+st.text("")
+st.text("")
+st.text("")
+
 
 
 # graficos de barras apiladas 
