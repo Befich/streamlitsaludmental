@@ -210,6 +210,11 @@ st.text("")
 # Mostrar los botones para elegir colores
 st.sidebar.header('Selecciona los colores para los Niveles de Estrés')
 
+st.checkbox(color_grafico_1 = st.sidebar.color_picker('Nivel de Estrés 1 (Alto)', '#007bff'), 
+color_grafico_2 = st.sidebar.color_picker('Nivel de Estrés 2 (Bajo)', '#28a745'), 
+color_grafico_3 = st.sidebar.color_picker('Nivel de Estrés 3 (Medio)', '#dc3545')
+)
+
 color_grafico_1 = st.sidebar.color_picker('Nivel de Estrés 1 (Alto)', '#007bff')
 color_grafico_2 = st.sidebar.color_picker('Nivel de Estrés 2 (Bajo)', '#28a745')
 color_grafico_3 = st.sidebar.color_picker('Nivel de Estrés 3 (Medio)', '#dc3545')
