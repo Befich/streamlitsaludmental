@@ -11,6 +11,7 @@ st.markdown("""
     [data-testid=stSidebar] {background-color: #A8CDF3;}
 </style>
 """, unsafe_allow_html=True)
+st.text(""hola"")
 
 with st.sidebar:
     st.title('Reproductor Musical desde YouTube')
