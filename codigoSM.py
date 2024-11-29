@@ -167,7 +167,7 @@ columnas_seleccionables = [
 ]
 
 st.title("Gráfico de Dispersión")
-st.text("El gráfico de dispersión presentado permite analizar relaciones entre diferentes variables seleccionadas por el usuario. El eje X representa los valores de la columna seleccionada como referencia horizontal, mientras que el eje Y corresponde a la referencia vertical. Además, el tamaño de los puntos se define en función de otra columna, lo que facilita identificar patrones o valores destacados, y los colores se asignan según una escala basada en una cuarta columna para proporcionar información adicional.
+st.text("El gráfico de dispersión presentado permite analizar relaciones entre diferentes variables seleccionadas por el usuario. El eje X representa los valores de la columna seleccionada como referencia horizontal, mientras que el eje Y corresponde a la referencia vertical. Además, el tamaño de los puntos se define en función de otra columna, lo que facilita identificar patrones o valores destacados, y los colores se asignan según una escala basada en una cuarta columna para proporcionar información adicional.")
 
 Esta visualización es ideal para descubrir tendencias, relaciones o agrupaciones entre las variables seleccionadas, ofreciendo una herramienta interactiva y versátil para el análisis exploratorio de datos.")
 # Controles del usuario
