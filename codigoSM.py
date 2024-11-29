@@ -199,8 +199,7 @@ plt.colorbar(scatter, label=color)
 st.pyplot(plt)
 
 
-placeholder = st.empty()
-
+st.text("")
 
 
 # graficos de barras apiladas 
