@@ -155,22 +155,6 @@ elif informacion_2 == "Datos demográficos de los participantes":
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Columnas seleccionables
 columnas_seleccionables = [
     "Age",
@@ -217,16 +201,15 @@ st.pyplot(plt)
 
 
 
+
+
 # graficos de barras apiladas 
-
-
-
 # Mostrar los botones para elegir colores
 st.sidebar.header('Selecciona los colores para los Niveles de Estrés')
 
-color_grafico_1 = st.sidebar.color_picker('Nivel de Estrés 1 (Bajo)', '#007bff')
-color_grafico_2 = st.sidebar.color_picker('Nivel de Estrés 2 (Moderado)', '#28a745')
-color_grafico_3 = st.sidebar.color_picker('Nivel de Estrés 3 (Alto)', '#dc3545')
+color_grafico_1 = st.sidebar.color_picker('Nivel de Estrés 1 (Alto)', '#007bff')
+color_grafico_2 = st.sidebar.color_picker('Nivel de Estrés 2 (Bajo)', '#28a745')
+color_grafico_3 = st.sidebar.color_picker('Nivel de Estrés 3 (Medio)', '#dc3545')
 
 # Crear una lista de colores basada en los 3 colores seleccionados
 colors = [color_grafico_1, color_grafico_2, color_grafico_3]
