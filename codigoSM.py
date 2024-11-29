@@ -156,6 +156,21 @@ elif informacion_2 == "Datos demográficos de los participantes":
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Columnas seleccionables
 columnas_seleccionables = [
     "Age",
@@ -198,3 +213,44 @@ plt.colorbar(scatter, label=color)
 
 # Mostrar gráfico en Streamlit
 st.pyplot(plt)
+
+
+
+
+# graficos de barras apiladas 
+
+
+
+# Mostrar los botones para elegir colores
+st.sidebar.header('Selecciona los colores para los Niveles de Estrés')
+
+color_grafico_1 = st.sidebar.color_picker('Nivel de Estrés 1 (Bajo)', '#007bff')
+color_grafico_2 = st.sidebar.color_picker('Nivel de Estrés 2 (Moderado)', '#28a745')
+color_grafico_3 = st.sidebar.color_picker('Nivel de Estrés 3 (Alto)', '#dc3545')
+
+# Crear una lista de colores basada en los 3 colores seleccionados
+colors = [color_grafico_1, color_grafico_2, color_grafico_3]
+
+# Crear el gráfico de barras apiladas
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Crear el gráfico de barras apiladas sin agrupamiento (asumiendo que ya están los datos de la columna `Stress_Level`)
+df_pivot = df.pivot_table(index='Work_Location', columns='Stress_Level', aggfunc='size', fill_value=0)
+
+# Crear gráfico de barras apiladas
+df_pivot.plot(kind='bar', stacked=True, ax=ax, color=colors)
+
+# Etiquetas y título del gráfico
+ax.set_title("Distribución de Niveles de Estrés según Ubicación Laboral", fontsize=16)
+ax.set_xlabel("Ubicación Laboral", fontsize=12)
+ax.set_ylabel("Número de Empleados", fontsize=12)
+ax.legend(title="Nivel de Estrés", title_fontsize='13', fontsize='11')
+
+# Mostrar el gráfico
+st.pyplot(fig)
+
+
+# final del codigo de graficos 
+
+
+st.markdown("Al ver los datos de estrés según dónde trabajamos (oficina, casa o una mezcla), vemos que la situación es más complicada de lo que parece. Aunque trabajar desde casa puede ser más tranquilo para algunos, otros se sienten solos o les cuesta desconectar. En la oficina, las presiones del día a día y las relaciones con los compañeros también generan estrés. El modelo híbrido, que combina ambas opciones, podría ser una buena solución para muchos, pero hay que analizar caso por caso para saber qué funciona mejor para cada persona.")
