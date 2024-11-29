@@ -157,7 +157,7 @@ elif informacion_2 == "Datos demográficos de los participantes":
 
 
 # Columnas seleccionables
-columns_to_use = [
+columnas_seleccionables = [
     "Age",
     "Years_of_Experience",
     "Hours_Worked_Per_Week",
@@ -170,10 +170,10 @@ columns_to_use = [
 st.title("Gráfico de Dispersión Interactivo")
 
 # Controles del usuario
-x_axis = st.selectbox("Selecciona la columna para el eje X:", columns_to_use, index=0)
-y_axis = st.selectbox("Selecciona la columna para el eje Y:", columns_to_use, index=1)
-size = st.selectbox("Selecciona la columna para el tamaño de los círculos:", columns_to_use, index=2)
-color = st.selectbox("Selecciona la columna para el color:", columns_to_use, index=3)
+x_axis = st.selectbox("Selecciona la columna para el eje X", columnas_seleccionables, index=0)
+y_axis = st.selectbox("Selecciona la columna para el eje Y", columnas_seleccionables, index=1)
+size = st.selectbox("Selecciona la columna para el tamaño de los círculos", columnas_seleccionables, index=2)
+color = st.selectbox("Selecciona la columna para el color", columnas_seleccionables, index=3)
 
 
 # Crear gráfico con Matplotlib
