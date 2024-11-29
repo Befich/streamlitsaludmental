@@ -13,7 +13,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("<h1 style='color: white'>Opciones de color</h1>", unsafe_allow_html=True)
     st.title('Reproductor Musical desde YouTube')
     
     playlist_url = "https://www.youtube.com/playlist?list=PLHLua7lnY9X-uAKqwp0T23h3A4d-ZajTO"
