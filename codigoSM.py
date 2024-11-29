@@ -66,39 +66,6 @@ elif tipo_grafico == "Histograma":
         st.pyplot(plt)
         
 
-st.title("Gráficos de Pastel")
-tipo_grafico_pastel = st.radio("Selecciona el gráfico que deseas visualizar:", ["Porcentaje de empleados por región", "Porcentaje de empleados por género", "Distribución de roles laborales"])
-
-# Generar gráfico de pastel
-if tipo_grafico_pastel == "Porcentaje de empleados por región":
-    st.subheader("Porcentaje de empleados por región")
-    region_counts = df['Region'].value_counts()
-    
-    # Crear gráfico de pastel
-    fig, ax = plt.subplots()
-    ax.pie(region_counts, labels=region_counts.index, autopct='%1.1f%%', startangle=90)
-    ax.set_title("Distribución por Región")
-    st.pyplot(fig)
-
-elif tipo_grafico_pastel == "Porcentaje de empleados por género":
-    st.subheader("Porcentaje de empleados por género")
-    gender_counts = df['Gender'].value_counts()
-    
-    # Crear gráfico de pastel
-    fig, ax = plt.subplots()
-    ax.pie(gender_counts, labels=gender_counts.index, autopct='%1.1f%%', startangle=90)
-    ax.set_title("Distribución por Género")
-    st.pyplot(fig)
-
-elif tipo_grafico_pastel == "Distribución de roles laborales":
-    st.subheader("Distribución de roles laborales")
-    role_counts = df['Job_Role'].value_counts()
-    
-    # Crear gráfico de pastel
-    fig, ax = plt.subplots()
-    ax.pie(role_counts, labels=role_counts.index, autopct='%1.1f%%', startangle=90)
-    ax.set_title("Distribución de Roles Laborales")
-    st.pyplot(fig)
 
 
 columna_trastorno = ["Depresión","Ansiedad","Burnout"]
@@ -134,6 +101,48 @@ else:
                         file_name="Cuestionario para Burnout.pdf",
                         mime="appsaludmental-nucwd9c8fligafado4zcnzw.streamlit.app")
     
+
+
+
+
+
+
+
+st.title("Gráficos de Pastel")
+tipo_grafico_pastel = st.radio("Selecciona el gráfico que deseas visualizar:", ["Porcentaje de empleados por región", "Porcentaje de empleados por género", "Distribución de roles laborales"])
+
+# Generar gráfico de pastel
+if tipo_grafico_pastel == "Porcentaje de empleados por región":
+    st.subheader("Porcentaje de empleados por región")
+    region_counts = df['Region'].value_counts()
+    
+    # Crear gráfico de pastel
+    fig, ax = plt.subplots()
+    ax.pie(region_counts, labels=region_counts.index, autopct='%1.1f%%', startangle=90)
+    ax.set_title("Distribución por Región")
+    st.pyplot(fig)
+
+elif tipo_grafico_pastel == "Porcentaje de empleados por género":
+    st.subheader("Porcentaje de empleados por género")
+    gender_counts = df['Gender'].value_counts()
+    
+    # Crear gráfico de pastel
+    fig, ax = plt.subplots()
+    ax.pie(gender_counts, labels=gender_counts.index, autopct='%1.1f%%', startangle=90)
+    ax.set_title("Distribución por Género")
+    st.pyplot(fig)
+
+elif tipo_grafico_pastel == "Distribución de roles laborales":
+    st.subheader("Distribución de roles laborales")
+    role_counts = df['Job_Role'].value_counts()
+    
+    # Crear gráfico de pastel
+    fig, ax = plt.subplots()
+    ax.pie(role_counts, labels=role_counts.index, autopct='%1.1f%%', startangle=90)
+    ax.set_title("Distribución de Roles Laborales")
+    st.pyplot(fig)
+
+
 
 
 st.subheader("Más información sobre el gráfico seleccionado")
