@@ -11,7 +11,7 @@ st.markdown("""
     [data-testid=stSidebar] {background-color: #A8CDF3;}
 </style>
 """, unsafe_allow_html=True)
-st.text("El trabajo remoto ha transformado la manera en que nos desempeñamos profesionalmente, pero también ha traído nuevos retos para nuestra salud mental. En esta sección, exploramos datos relevantes que ilustran cómo el teletrabajo impacta en la ansiedad, el estrés y el bienestar general de los empleados. A través de gráficos, veremos el panorama actual y discutiremos estrategias para fomentar un entorno de trabajo remoto más saludable y equilibrado")
+st.text("El trabajo remoto ha transformado la manera en que nos desempeñamos profesionalmente, pero también ha traído nuevos retos para nuestra salud mental. En esta pagina, exploramos datos relevantes que ilustran cómo el teletrabajo impacta en la ansiedad, el estrés y el bienestar general de los empleados. A través de gráficos.")
 
 with st.sidebar:
     st.title('Reproductor Musical desde YouTube')
