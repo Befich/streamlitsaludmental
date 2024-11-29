@@ -175,8 +175,6 @@ y_axis = st.selectbox("Selecciona la columna para el eje Y:", columns_to_use, in
 size = st.selectbox("Selecciona la columna para el tamaño de los círculos:", columns_to_use, index=2)
 color = st.selectbox("Selecciona la columna para el color:", columns_to_use, index=3)
 
-st.write("### Configuración seleccionada:")
-st.write(f"**Eje X:** {x_axis}, **Eje Y:** {y_axis}, **Tamaño:** {size}, **Color:** {color}")
 
 # Crear gráfico con Matplotlib
 plt.figure(figsize=(10, 6))
