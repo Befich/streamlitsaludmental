@@ -166,7 +166,7 @@ columnas_seleccionables = [
     "Company_Support_for_Remote_Work",
 ]
 
-st.title("Gráfico de Dispersión Interactivo")
+st.title("Gráfico de Dispersión")
 
 # Controles del usuario
 x_axis = st.selectbox("Selecciona la columna para el eje X", columnas_seleccionables, index=0)
@@ -199,7 +199,7 @@ plt.colorbar(scatter, label=color)
 st.pyplot(plt)
 
 
-
+st.titile("‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ")
 
 
 
