@@ -143,16 +143,6 @@ if informacion_1 == "Impacto del trabajo remoto":
 elif informacion_1 == "Factores que afectan el estrés":
     st.write("El estrés puede ser causado por varios factores, como la presión laboral, las responsabilidades familiares, el entorno de trabajo, y los problemas personales. La gestión del tiempo y las técnicas de relajación pueden ayudar a reducir el estrés.")
 
-st.subheader("Más detalles sobre el estudio")
-informacion_2 = st.selectbox("Selecciona un tema para obtener más detalles", ["Metodología del estudio", "Datos demográficos de los participantes"], key="informacion_2")
-if informacion_2 == "Metodología del estudio":
-    st.write("El estudio se basó en encuestas realizadas a trabajadores de diferentes sectores. Se recopilaron datos sobre su bienestar mental, estrés y satisfacción laboral.")
-elif informacion_2 == "Datos demográficos de los participantes":
-    st.write("Los participantes fueron trabajadores de diversas edades, géneros y niveles de experiencia. La mayoría trabajaba en sectores como tecnología, educación y atención al cliente.")
-
-
-
-
 
 
 # Columnas seleccionables
@@ -239,3 +229,17 @@ st.pyplot(fig)
 
 
 st.markdown("Al ver los datos de estrés según dónde trabajamos (oficina, casa o una mezcla), vemos que la situación es más complicada de lo que parece. Aunque trabajar desde casa puede ser más tranquilo para algunos, otros se sienten solos o les cuesta desconectar. En la oficina, las presiones del día a día y las relaciones con los compañeros también generan estrés. El modelo híbrido, que combina ambas opciones, podría ser una buena solución para muchos, pero hay que analizar caso por caso para saber qué funciona mejor para cada persona.")
+
+
+
+
+
+
+
+
+st.subheader("Más detalles sobre el estudio")
+informacion_2 = st.selectbox("Selecciona un tema para obtener más detalles", ["Metodología del estudio", "Datos demográficos de los participantes"], key="informacion_2")
+if informacion_2 == "Metodología del estudio":
+    st.write("El estudio se basó en encuestas realizadas a trabajadores de diferentes sectores. Se recopilaron datos sobre su bienestar mental, estrés y satisfacción laboral.")
+elif informacion_2 == "Datos demográficos de los participantes":
+    st.write("Los participantes fueron trabajadores de diversas edades, géneros y niveles de experiencia. La mayoría trabajaba en sectores como tecnología, educación y atención al cliente.")
