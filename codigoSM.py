@@ -8,7 +8,7 @@ df = pd.read_csv("Impact_of_Remote_Work_on_Mental_Health.csv")
 st.title("Salud mental en trabajo remoto")
 st.markdown("""
 <style>
-    [data-testid=stSidebar] {background-color: #10609d;}
+    [data-testid=stSidebar] {background-color: #92B6FB;}
 </style>
 """, unsafe_allow_html=True)
 
