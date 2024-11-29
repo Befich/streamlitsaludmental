@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 
 
 df = pd.read_csv("Impact_of_Remote_Work_on_Mental_Health.csv")
-st.title("Salud mental en trabajo remoto")
+st.title("Salud Mental en Trabajo Remoto")
 st.markdown("""
 <style>
     [data-testid=stSidebar] {background-color: #A8CDF3;}
