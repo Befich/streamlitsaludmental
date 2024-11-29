@@ -269,4 +269,4 @@ Con el apoyo apropiado, puedes identificar afecciones de salud mental y recibir 
 
 
 
-st.title("Recuerda qué tu salud mental es importante")
+st.title("Recuerda qué tu Salud Mental es Importante")
